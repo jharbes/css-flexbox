@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        div.item{
+            margin: 5px;
+            padding: 5px;
+            background-color: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+            width: calc(33.3333% - 20px); /* Fazendo com que haja apenas três itens por container */
+            height: 30px;
+        }
+        .flexivel{
+            display: flex;
+        }
+        .vertical{
+            flex-direction: column;
+        }
+        .horizontal{
+            flex-direction: row;
+        }
+        .quebra{
+            flex-wrap: wrap;
+        }
+        div.container{
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            justify-content:center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        /* Dessa vez colocamos as configurações nas própria classe container */
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div class="container">
+        <div class="item">CFBCursos 1</div>
+        <div class="item">CFBCursos 2</div>
+        <div class="item">CFBCursos 3</div>
+        <div class="item">CFBCursos 4</div>
+        <div class="item">CFBCursos 5</div>
+        <div class="item">CFBCursos 6</div>
+        <div class="item">CFBCursos 7</div>
+        <div class="item">CFBCursos 8</div>
+    </div>
+</body>
+</html>
