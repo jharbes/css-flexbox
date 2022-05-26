@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        div.item{
+            margin: 5px;
+            padding: 5px;
+            background-color: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+        }
+        .flexivel{
+            display: flex;
+        }
+        .vertical{
+            flex-direction: column;
+        }
+        .horizontal{
+            flex-direction: row;
+        }
+        .quebra{
+            flex-wrap: wrap;
+        }
+        div.container{
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            justify-content: space-around;
+        }
+        /* No caso deste exemplo criamos classes com as configurações
+            e optamos por inserir dessa maneira em vez de colocarmos na 
+            própria classe container, mas esta também é uma opção. */
+    </style>
+</head>
+<body>
+    <h1>Usando justify-content: space-around;</h1>
+    <div class="container flexivel horizontal quebra">
+        <div class="item">CFBCursos 1</div>
+        <div class="item">CFBCursos 2</div>
+        <div class="item">CFBCursos 3</div>
+        <div class="item">CFBCursos 4</div>
+    </div>
+
+    <h1>Usando justify-content: space-between;</h1>
+    <div class="container flexivel horizontal quebra" style="justify-content: space-between;">
+        <div class="item">CFBCursos 1</div>
+        <div class="item">CFBCursos 2</div>
+        <div class="item">CFBCursos 3</div>
+        <div class="item">CFBCursos 4</div>
+    </div>
+
+    <h1>Usando justify-content: flex-start;</h1>
+    <div class="container flexivel horizontal quebra" style="justify-content: flex-start;">
+        <div class="item">CFBCursos 1</div>
+        <div class="item">CFBCursos 2</div>
+        <div class="item">CFBCursos 3</div>
+        <div class="item">CFBCursos 4</div>
+    </div>
+
+    <h1>Usando justify-content: flex-end;</h1>
+    <div class="container flexivel horizontal quebra" style="justify-content: flex-end;">
+        <div class="item">CFBCursos 1</div>
+        <div class="item">CFBCursos 2</div>
+        <div class="item">CFBCursos 3</div>
+        <div class="item">CFBCursos 4</div>
+    </div>
+</body>
+</html>
