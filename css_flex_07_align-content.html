@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        div.item{
+            margin: 5px;
+            padding: 5px;
+            background-color: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+            width: calc(33.33333% - 20px);
+        }
+        .flexivel{
+            display: flex;
+        }
+        .vertical{
+            flex-direction: column;
+        }
+        .horizontal{
+            flex-direction: row;
+        }
+        .quebra{
+            flex-wrap: wrap;
+        }
+        div.container{
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            justify-content: space-around; /*eixo primario*/
+            height: 400px;
+            /*align-items: stretch; /*eixo secundario*/
+            align-content: stretch; /*eixo secundario*/
+        }
+        /* No caso deste exemplo criamos classes com as configurações
+            e optamos por inserir dessa maneira em vez de colocarmos na 
+            própria classe container, mas esta também é uma opção. */
+    </style>
+</head>
+<body>
+    <h1>Usando align contents</h1>
+    <div class="container flexivel horizontal quebra">
+        <div class="item">CFBCursos 1</div>
+        <div class="item">CFBCursos 2</div>
+        <div class="item">CFBCursos 3</div>
+        <div class="item">CFBCursos 4</div>
+        <div class="item">CFBCursos 5</div>
+        <div class="item">CFBCursos 6</div>
+        <div class="item">CFBCursos 7</div>
+        <div class="item">CFBCursos 8</div>
+        <div class="item">CFBCursos 9</div>
+    </div>
+
+
+</body>
+</html>
