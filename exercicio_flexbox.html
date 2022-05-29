@@ -32,6 +32,7 @@
         }
         section{
             width: 1500px;
+            flex-basis: 1;
         }
         article{
             flex-direction: row;
@@ -41,6 +42,7 @@
             margin:0px 10px 10px 10px;
             background-color: antiquewhite;
             border-radius: 10px;
+            flex-basis: 1;
         }
         aside{
             display: flex;
@@ -52,13 +54,23 @@
             background-color: white;
             border-radius: 10px;
             justify-content: space-around;
+            flex-basis: 1;
         }
         aside>p{
             display: flex;
-            margin-right: 30px;
+            margin-right: 10px;
             margin-left: 10px;
             border: 1px solid black;
             padding: 20px;
+            flex-basis: 1;
+        }
+        menu{
+            display: flex;
+            justify-content: center;
+            background-color: darkgreen;
+        }
+        nav{
+            flex-basis: 1;
         }
     </style>
 </head>
@@ -67,7 +79,9 @@
         <h1>Exercício de CSS FlexBox</h1>
         <menu>
             <span>Home</span>
-            <span>Casa<span>
+            <span>Notícias<span>
+            <span>Contato</span>
+            <span>Cadastre-se</span>
         </menu>
     </header>
     <main>
