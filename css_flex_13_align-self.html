@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .flexivel{
+            display: flex;
+        }
+        .vertical{
+            flex-direction: column;
+        }
+        .horizontal{
+            flex-direction: row;
+        }
+        .quebra{
+            flex-wrap: wrap;
+        }
+        .tam0{
+            flex-grow: 0;
+        }
+        .tam1{
+            flex-grow: 1;
+        }
+        .tam2{
+            flex-grow: 2;
+        }
+        .tam3{
+            flex-grow: 3;
+        }
+        .basea{
+            flex-basis: auto;
+        }
+        .base0{
+            flex-basis: 0;
+        }
+        .base1{
+            flex-basis: 1;
+        }
+        .base2{
+            flex-basis: 2;
+        }
+        .order0{
+            order:0;
+        }
+        .order1{
+            order:1;
+        }
+        .order2{
+            order:2;
+        }
+        .order3{
+            order:3;
+        }
+        .reduzir1{
+            flex-shrink: 1;
+        }
+        .reduzir0{
+            flex-shrink: 0;
+        }
+        .reduzir2{
+            flex-shrink: 2;
+        }
+        .reduzir3{
+            flex-shrink: 3;
+        }
+        .flex{
+            /*
+            flex-grow, flew-shrink, flex-basis
+            n           1           0
+            */
+            flex:1;
+        }
+        .inicio{
+            align-self: flex-start;
+        }
+        .fim{
+            align-self: flex-end;
+        }
+        div.container{
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            justify-content: center; /*eixo primario*/
+            height: 400px;
+            align-items: center; /*eixo secundario*/
+            align-content: space-between; /*eixo secundario*/
+        }
+        div.item{
+            margin: 5px;
+            padding: 5px;
+            background-color: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+        }
+        /* No caso deste exemplo criamos classes com as configurações
+            e optamos por inserir dessa maneira em vez de colocarmos na 
+            própria classe container, mas esta também é uma opção. */
+    </style>
+</head>
+<body>
+    <h1>Usando a propriedade Align-self</h1>
+    <div class="container flexivel horizontal">
+        <div class="item flex inicio">CFB</div>
+        <div class="item flex">CFBCursos</div>
+        <div class="item flex fim">CFBCursos CFBCursos</div>
+    </div>
+
+
+</body>
+</html>
