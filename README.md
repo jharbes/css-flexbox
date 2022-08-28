@@ -1,3 +1,5 @@
+<img src="logo-css-3-512.png" align="right" width="150">
+
 # CSS-FlexBox
 
 Curso de CSS FlexBox - CFBCursos
